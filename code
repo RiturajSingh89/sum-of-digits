@@ -1,0 +1,15 @@
+noofinput=input()
+numberslist=input().split(" ")
+sumofdigitlist=[]
+for item in numberslist:
+    sumofdigit=sum(int(x) for x in item)
+    sumofdigitlist.append(sumofdigit)
+m=10**9+7    
+def sods(l1):
+    fac=1
+    sum=0
+    for i in l1:
+        sum=sum+i*fac
+        fac=fac*2
+    return sum
+print (sods(sorted(sumofdigitlist))%m)
